@@ -15,7 +15,6 @@ export default function Hero() {
                 <p className="text-gray-400 leading-relaxed max-w-md">{profile.bio}</p>
                 <div className="flex flex-wrap gap-4 text-sm text-gray-500 font-mono">
                     <span>Klaten, Indonesia</span>
-                    <span>SMK N 1 Klaten</span>
                     <span>NixOS</span>
                 </div>
                 <div className="flex flex-wrap gap-3">
