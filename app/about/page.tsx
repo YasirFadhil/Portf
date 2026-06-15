@@ -1,5 +1,6 @@
 import { profile, skills, studies, hobbies } from "@/app/data"
 import Image from "next/image"
+import SpotifyEmbed from "../component/Spotify"
 
 const categoryLabel: Record<string, string> = {
     frontend: "Frontend",
@@ -19,7 +20,7 @@ export default function About() {
     return (
         <>
             {/* Hero */}
-            <section className="flex flex-col md:flex-row items-center justify-center min-h-screen gap-12 px-8 max-w-6xl mx-auto">
+            <section className="flex flex-col md:flex-row items-center justify-center min-h-screen gap-12 px-8 max-w-6xl mx-auto mt-10 md:mt-1">
                 <Image
                     src="/image.webp"
                     alt={profile.name}
@@ -27,7 +28,7 @@ export default function About() {
                     height={260}
                     className="rounded-full object-cover border-4 border-port-highlight flex-shrink-0"
                 />
-                <div className="flex flex-col gap-4 md:text-left max-w-lg">
+                <div className="flex flex-col gap-4 md:text-left max-w-lg mt-10 md:mt-1">
                     <h1 className="font-bold text-4xl">About Me</h1>
                     <h3 className="font-bold text-xl text-port-accent">{profile.tagline}</h3>
                     {profile.bioLong.map((para, index) => (
@@ -106,6 +107,15 @@ export default function About() {
                         ))}
                     </div>
                 </div>
+            </section>
+
+            <section className="py-8 px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-center font-bold text-4xl mb-9 text-port-accent">Favorite Songs</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-6xl mx-auto mb-16">    
+                    <SpotifyEmbed />
+                  </div>
+              </div>
             </section>
         </>
     )

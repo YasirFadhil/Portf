@@ -8,14 +8,14 @@ export default function Hero() {
             {/* Left: Text */}
             <div className="flex flex-col gap-6 flex-1">
                 <div>
-                    <p className="text-port-accent text-sm font-mono mb-2 mt-8 tracking-widest uppercase">Hi, I&apos;m</p>
+                    <p className="text-port-accent text-sm font-mono mb-2 mt-6 tracking-widest uppercase">Hi, I&apos;m</p>
                     <h1 className="text-3xl md:text-5xl font-bold leading-tight">{profile.name}</h1>
                     <p className="text-xl text-port-highlight mt-3">{profile.tagline}</p>
                 </div>
                 <p className="text-gray-400 leading-relaxed max-w-md">{profile.bio}</p>
                 <div className="flex flex-wrap gap-4 text-sm text-gray-500 font-mono">
-                    <span>Klaten, Indonesia</span>
-                    <span>NixOS</span>
+                    <span>Klaten, Central Java</span>
+                    <span>Indonesia</span>
                 </div>
                 <div className="flex flex-wrap gap-3">
                     <a
