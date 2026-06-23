@@ -5,7 +5,7 @@ const stats = [
     { label: "Age", value: `${hitungUmur(profile.date)} years old` },
     { label: "Location", value: "Klaten, Indonesia" },
     { label: "Status", value: "Pursuing IT Degree" },
-    { label: "OS", value: "NixOS" },
+    { label: "Jobs", value: "-" },
 ];
 
 export default function HomeAbout() {
