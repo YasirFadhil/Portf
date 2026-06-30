@@ -1,4 +1,4 @@
-import { profile, skills, studies, hobbies } from "@/app/data"
+import { profile, skills, studies, hobbies, experience } from "@/app/data"
 import Image from "next/image"
 import SpotifyEmbed from "../component/Spotify"
 
@@ -23,10 +23,11 @@ export default function About() {
             <section className="flex flex-col md:flex-row items-center justify-center min-h-screen gap-12 px-8 max-w-6xl mx-auto mt-10 md:mt-1">
                 <Image
                     src="/image.webp"
+                    loading="eager"
                     alt={profile.name}
                     width={260}
                     height={260}
-                    className="rounded-full object-cover border-4 border-port-highlight flex-shrink-0"
+                    className="rounded-full object-cover border-4 border-port-highlight/20 flex-shrink-0 hover:scale-105 hover:border-port-highlight/50 transition-all duration-300 ease-in-out"
                 />
                 <div className="flex flex-col gap-4 md:text-left max-w-lg mt-10 md:mt-1">
                     <h1 className="font-bold text-4xl">About Me</h1>
@@ -62,6 +63,29 @@ export default function About() {
                         ))}
                     </div>
                 </div>
+            </section>
+
+            {/* Experience*/}
+            <section className="py-16 px-8">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="font-bold text-4xl mb-2 text-port-accent">Experience</h2>
+                {experience.map((exp, index) => (
+                    <div key={exp.name} className="flex gap-4">
+                      <div className="flex flex-col items-center">
+                        <div className="w-3 h-3 rounded-full bg-port-accent mt-1.5 flex-shrink-0" />
+                        {index < experience.length - 1 && (
+                          <div className="w-px flex-1 bg-port-border/50 my-1" />
+                        )}
+                        
+                      </div>
+                      <div className="pb-8">
+                        <p className="font-bold">{exp.name}</p>
+                        <p className="text-port-accent text-xs font-mono mt-0.5">{exp.year}</p>
+                        <p className="text-gray-400 mb-8">{exp.description}</p>
+                      </div>
+                    </div>
+                ))}
+               </div>
             </section>
 
             {/* Hobbies — Pills */}
@@ -108,15 +132,21 @@ export default function About() {
                     </div>
                 </div>
             </section>
+            
+            {/*Music player*/}
+            
 
-            <section className="py-8 px-4">
-              <div className="max-w-6xl mx-auto">
-                <h2 className="text-center font-bold text-4xl mb-9 text-port-accent">Favorite Songs</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-6xl mx-auto mb-16">    
-                    <SpotifyEmbed />
-                  </div>
-              </div>
-            </section>
+            {/* Spotify
+            <section className="py-16 px-8">
+                <div className="max-w-6xl mx-auto">
+                    <h2 className="font-bold text-4xl mb-2 text-port-accent">Music</h2>
+                    <p className="text-gray-400 mb-8">Things I listen to while coding</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <SpotifyEmbed />
+                    </div>
+                </div>
+            </section> */}
+            
         </>
     )
 }

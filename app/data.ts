@@ -122,18 +122,11 @@ export const projects: Projects[] = [
         url: "https://github.com/YasirFadhil/web2"
     },
     {
-        name: "AI Chatbot", 
-        year: 2025, 
-        description: "Web Ai based chatbot, just some random prject I did using Gemini API.",
-        tags: ["HTML", "CSS", "JavaScript", "Gemini API"],
-        url: "https://github.com/YasirFadhil/jashb"
-    },
-    {
         name: "Cloud Storage Website",
         year: 2025, 
-        description: "Another random project I did.",
-        tags: ["HTML", "CSS", "JavaScript", "Python"],
-        url: "https://github.com/YasirFadhil/person"
+        description: "Just a random project I did.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        url: "https://github.com/YasirFadhil/klod"
     },
     {
         name: "First Portofolio Website",
@@ -156,6 +149,27 @@ export const projects: Projects[] = [
         tags: ["Photography", "Night Sky", "Landscape", "Sunset"],
         url: "https://drive.google.com/drive/folders/1NQGOB9rSY6X5dqPjr2Ret2H0-uHh_8c-"
     }
+];
+
+// Experience
+
+export type Experience = {
+  name: string;
+  description: string;
+  year: string;
+}
+
+export const experience: Experience[] = [
+  {
+    name: "IT Support Intern - SMP Negeri 5 Klaten",
+    description: "Managed daily computer lab operations, including hardware diagnostics, system readiness, and routine maintenance. Provided on-site technical assistance for classroom activities, troubleshooted basic network issues, and maintained peripheral devices such as printers.",
+    year: "Nov 2025 - Mar 2026",
+  },
+  {
+    name: "Freelance Web Developer",
+    description: "Collaborated in a 3-person team to develop an interactive website supporting our former school's proposal for an educational competition. Focused on building a responsive and user-friendly interface for assessment purposes.",
+    year: "23 - 30 June 2026",
+  }
 ];
 
 // Study
